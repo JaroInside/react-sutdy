@@ -40,7 +40,6 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "1.x",
     "babel-eslint": "10.x",
     "eslint": "5.x",
     "eslint-config-airbnb": "^17.1.0",
