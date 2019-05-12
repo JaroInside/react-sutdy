@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Label from './label';
-import Operations from './operations';
 import './Calculator.css';
 
 class Calculator extends Component {
@@ -10,6 +9,8 @@ class Calculator extends Component {
     operation: '',
     result: '',
   };
+
+  expresstion = ['+', '−', '×', '÷'];
 
   handleInputChange = (val, index) => {
     if (!Number.isNaN(Number(val))) {
@@ -79,6 +80,7 @@ class Calculator extends Component {
 
   render() {
     const {
+      expresstion,
       handleInputChange,
       selectExpression,
       checkAllInput,
@@ -102,7 +104,15 @@ class Calculator extends Component {
           </Label>
         ))}
         <Label label="수식">
-          <Operations selectExpression={selectExpression} />
+          {expresstion.map(exp => (
+            <button
+              key={`expresstion_${exp}`}
+              type="button"
+              onClick={selectExpression}
+            >
+              {exp}
+            </button>
+          ))}
         </Label>
         <Label label="계산식">
           <div className="oper">
