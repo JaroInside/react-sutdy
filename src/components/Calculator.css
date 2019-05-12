@@ -1,0 +1,11 @@
+.calculator {
+  text-align: center;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+.oper {
+  font-size: 1.2rem;
+}
