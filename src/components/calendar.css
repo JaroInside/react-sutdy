@@ -1,0 +1,22 @@
+.calendar {
+  width: 350px;
+  margin: 0 auto;
+  text-align: left;
+  list-style: none;
+}
+
+.calendar li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: solid 1px #333;
+  box-sizing: border-box;
+}
+
+.sun {
+  color: red;
+}
+
+.sat {
+  color: blue;
+}

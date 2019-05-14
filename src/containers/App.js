@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import Input from '../components/Input';
 import Text from '../components/text';
 
+import Reply from '../components/Reply';
+
+import Calendar from '../components/calendar';
+
 import './App.css';
 
 /**
@@ -150,7 +154,8 @@ class App extends Component {
     const { text } = this.state;
     return (
       <div className="App">
-        <p>리액트 앱</p>
+        <Reply comment="부모댓글" />
+        {/* <p>리액트 앱</p>
         <div>
           <input type="text" onChange={this.handleChange} />
         </div>
@@ -158,6 +163,16 @@ class App extends Component {
           <Input handleChange={this.handleChange} />
         </div>
         <Text text={text} />
+        <br />
+        <br />
+        <br />
+        <br />
+        <hr />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Calendar /> */}
       </div>
     );
   }
