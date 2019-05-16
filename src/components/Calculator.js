@@ -13,9 +13,27 @@ class Calculator extends Component {
   expresstion = ['+', '−', '×', '÷'];
 
   handleInputChange = (val, index) => {
+    // const a = [1, 2, 3, 4, 5, 6, 7];
+    // const a = [8, 7, 6, 5, 4, 3, 2, 1];
+    // const a = ['z', 'x', 'c', 'a'];
+
+    // console.log(a.findIndex(i => i < 5));
+    // console.log(a.indexOf(1));
+
+    // console.log(a.join(' m '));
+
+    // console.log(a.sort());
+    // console.log(val);
+    // console.log(typeof val);
+    // console.log(Number('asdfsadfsdf'));
+    // console.log(Number('1111111'));
+    // console.log(Number.isNaN(Number('asdfsadfsdf')));
+    // console.log(Number.isNaN(Number('1111111')));
+
     if (!Number.isNaN(Number(val))) {
       const { input, operation } = this.state;
       const newInput = input.map((v, i) => (index === i ? val : v));
+
       const newOperation = newInput.some(i => i !== '') ? operation : '';
       this.setState({
         input: newInput,
@@ -73,7 +91,6 @@ class Calculator extends Component {
           });
           break;
         default:
-          break;
       }
     }
   };
@@ -95,6 +112,7 @@ class Calculator extends Component {
           // eslint-disable-next-line react/no-array-index-key
           <Label key={`calInput_${i}`} label={`숫자 ${i + 1}`}>
             <input
+              type="text"
               value={v}
               onChange={e => {
                 const { value } = e.target;
@@ -121,6 +139,9 @@ class Calculator extends Component {
         </Label>
         <Label label="결과">
           <div>{result}</div>
+        </Label>
+        <Label label="테스트라벨">
+          <span>테스트</span>
         </Label>
         <div>
           <button type="button" onClick={calculatorClear}>
